@@ -118,7 +118,7 @@ export default function BuilderPage() {
   return (
     <AppLayout>
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-teal-500 text-navy-950 font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
+        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-soft-pistachio text-deep-sage font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
           <span>✓ {toastMessage}</span>
         </div>
       )}
@@ -126,14 +126,14 @@ export default function BuilderPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/10 to-teal-500/10 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/10 to-teal-500/10 text-muted-pistachio text-xs font-semibold uppercase tracking-wider mb-2">
             <Hammer className="w-3.5 h-3.5" />
             MODULE 6 • WAVE BUILDER (PRO)
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Turn Ideas Into Structured Businesses
           </h1>
-          <p className="text-slate-400 text-xs sm:text-sm mt-1">
+          <p className="text-soft-pistachio text-xs sm:text-sm mt-1">
             Transformasi ide menjadi bisnis yang siap dieksekusi: perencanaan finansial COGS & BEP, konsep produk, persona, hingga kepatuhan regulasi BPOM & Halal.
           </p>
         </div>
@@ -153,14 +153,14 @@ export default function BuilderPage() {
       {!isPro && (
         <div className="p-5 rounded-2xl bg-gradient-to-r from-indigo-950/50 via-navy-900 to-teal-950/50 border border-indigo-500/40 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl">
           <div className="flex items-start gap-3">
-            <div className="p-2.5 rounded-xl bg-indigo-500/20 text-indigo-300 shrink-0">
+            <div className="p-2.5 rounded-xl bg-muted-pistachio/20 text-muted-pistachio shrink-0">
               <Lock className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-bold text-white text-sm mb-0.5">
                 WAVE Builder adalah Modul Eksklusif Paket PRO
               </h3>
-              <p className="text-xs text-slate-300 max-w-xl">
+              <p className="text-xs text-deep-sage max-w-xl">
                 Buka akses kalkulator finansial interaktif, generator persona pelanggan, perencanaan rantai pasok, dan modul kepatuhan regulasi Indonesia dengan beralih ke WAVE Pro.
               </p>
             </div>
@@ -175,13 +175,13 @@ export default function BuilderPage() {
       )}
 
       {/* Sub-Navigation Tabs */}
-      <div className="flex items-center gap-2 border-b border-slate-800 pb-3 mb-6 text-xs overflow-x-auto">
+      <div className="flex items-center gap-2 border-b border-soft-pistachio pb-3 mb-6 text-xs overflow-x-auto">
         <button
           onClick={() => setActiveTab('financials')}
           className={`px-4 py-2 rounded-xl font-bold flex items-center gap-2 transition-all ${
             activeTab === 'financials'
               ? 'bg-gradient-to-r from-indigo-600 to-teal-600 text-white'
-              : 'bg-navy-900 text-slate-400 hover:text-white border border-slate-800'
+              : 'bg-warm-ivory text-soft-pistachio hover:text-white border border-soft-pistachio'
           }`}
         >
           <Calculator className="w-4 h-4" />
@@ -193,7 +193,7 @@ export default function BuilderPage() {
           className={`px-4 py-2 rounded-xl font-bold flex items-center gap-2 transition-all ${
             activeTab === 'concept'
               ? 'bg-gradient-to-r from-indigo-600 to-teal-600 text-white'
-              : 'bg-navy-900 text-slate-400 hover:text-white border border-slate-800'
+              : 'bg-warm-ivory text-soft-pistachio hover:text-white border border-soft-pistachio'
           }`}
         >
           <FileText className="w-4 h-4" />
@@ -205,7 +205,7 @@ export default function BuilderPage() {
           className={`px-4 py-2 rounded-xl font-bold flex items-center gap-2 transition-all ${
             activeTab === 'regulatory'
               ? 'bg-gradient-to-r from-indigo-600 to-teal-600 text-white'
-              : 'bg-navy-900 text-slate-400 hover:text-white border border-slate-800'
+              : 'bg-warm-ivory text-soft-pistachio hover:text-white border border-soft-pistachio'
           }`}
         >
           <ShieldCheck className="w-4 h-4" />
@@ -218,13 +218,13 @@ export default function BuilderPage() {
         <div className="space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left 2 Cols: Editable Sliders and Assumptions */}
-            <div className="lg:col-span-2 p-6 rounded-2xl bg-navy-900 border border-slate-800 space-y-6">
+            <div className="lg:col-span-2 p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio space-y-6">
               <div className="flex items-center justify-between">
                 <h3 className="font-bold text-white text-base flex items-center gap-2">
-                  <Coins className="w-4 h-4 text-teal-400" />
+                  <Coins className="w-4 h-4 text-soft-pistachio" />
                   Asumsi Finansial & Parameter Unit Economics
                 </h3>
-                <span className="text-xs text-slate-400">Interaktif & Live Re-calculation</span>
+                <span className="text-xs text-soft-pistachio">Interaktif & Live Re-calculation</span>
               </div>
 
               {/* Sliders Grid */}
@@ -232,8 +232,8 @@ export default function BuilderPage() {
                 {/* Selling Price */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-slate-300 font-semibold">Harga Jual Konsumen (HET):</span>
-                    <span className="font-bold text-teal-300 text-sm">
+                    <span className="text-deep-sage font-semibold">Harga Jual Konsumen (HET):</span>
+                    <span className="font-bold text-soft-pistachio text-sm">
                       Rp {sellingPrice.toLocaleString('id-ID')}
                     </span>
                   </div>
@@ -251,8 +251,8 @@ export default function BuilderPage() {
                 {/* COGS */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-slate-300 font-semibold">Harga Pokok Produksi (COGS / HPP):</span>
-                    <span className="font-bold text-amber-300 text-sm">
+                    <span className="text-deep-sage font-semibold">Harga Pokok Produksi (COGS / HPP):</span>
+                    <span className="font-bold text-soft-apricot text-sm">
                       Rp {cogs.toLocaleString('id-ID')}
                     </span>
                   </div>
@@ -265,7 +265,7 @@ export default function BuilderPage() {
                     onChange={(e) => setCogs(Number(e.target.value))}
                     className="w-full accent-amber-400"
                   />
-                  <span className="text-[10px] text-slate-400 mt-0.5 block">
+                  <span className="text-[10px] text-soft-pistachio mt-0.5 block">
                     Mencakup bahan baku, botol/kemasan, dan upah maklon per unit.
                   </span>
                 </div>
@@ -273,7 +273,7 @@ export default function BuilderPage() {
                 {/* Target Volume */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-slate-300 font-semibold">Target Penjualan Bulanan:</span>
+                    <span className="text-deep-sage font-semibold">Target Penjualan Bulanan:</span>
                     <span className="font-bold text-white text-sm">
                       {targetUnits.toLocaleString('id-ID')} Unit
                     </span>
@@ -292,7 +292,7 @@ export default function BuilderPage() {
                 {/* Fixed Costs */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-slate-300 font-semibold">Biaya Operasional Tetap (Sewa & Gaji):</span>
+                    <span className="text-deep-sage font-semibold">Biaya Operasional Tetap (Sewa & Gaji):</span>
                     <span className="font-bold text-white text-sm">
                       Rp {fixedCosts.toLocaleString('id-ID')} / bln
                     </span>
@@ -311,7 +311,7 @@ export default function BuilderPage() {
                 {/* Marketing Budget */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-slate-300 font-semibold">Anggaran Pemasaran & Ads:</span>
+                    <span className="text-deep-sage font-semibold">Anggaran Pemasaran & Ads:</span>
                     <span className="font-bold text-white text-sm">
                       Rp {marketingBudget.toLocaleString('id-ID')} / bln
                     </span>
@@ -330,7 +330,7 @@ export default function BuilderPage() {
                 {/* Initial Capital */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-slate-300 font-semibold">Estimasi Modal Awal (Startup Capital):</span>
+                    <span className="text-deep-sage font-semibold">Estimasi Modal Awal (Startup Capital):</span>
                     <span className="font-bold text-white text-sm">
                       Rp {initialInvestment.toLocaleString('id-ID')}
                     </span>
@@ -347,10 +347,10 @@ export default function BuilderPage() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-800 flex justify-end">
+              <div className="pt-4 border-t border-soft-pistachio flex justify-end">
                 <button
                   onClick={handleSaveFinancialsToCanvas}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold text-xs shadow-md shadow-teal-500/15"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-soft-pistachio hover:bg-soft-pistachio text-deep-sage font-bold text-xs shadow-md shadow-teal-500/15"
                 >
                   <FolderPlus className="w-4 h-4" />
                   Simpan Simulasi Finansial ke Canvas
@@ -364,48 +364,48 @@ export default function BuilderPage() {
 
               <div className="space-y-4 text-xs">
                 {/* Gross Margin */}
-                <div className="p-3.5 rounded-xl bg-navy-950 border border-slate-800">
-                  <div className="text-slate-400 text-[10px] uppercase font-bold">Gross Profit Margin</div>
-                  <div className="text-2xl font-black text-teal-300 mt-1">
+                <div className="p-3.5 rounded-xl bg-warm-ivory border border-soft-pistachio">
+                  <div className="text-soft-pistachio text-[10px] uppercase font-bold">Gross Profit Margin</div>
+                  <div className="text-2xl font-black text-soft-pistachio mt-1">
                     {grossMarginPercent}%
                   </div>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-soft-pistachio">
                     Laba kotor Rp {unitProfit.toLocaleString('id-ID')} per unit terjual
                   </span>
                 </div>
 
                 {/* Break-even point */}
-                <div className="p-3.5 rounded-xl bg-navy-950 border border-slate-800">
-                  <div className="text-slate-400 text-[10px] uppercase font-bold">Titik Impas (BEP Bulanan)</div>
-                  <div className="text-2xl font-black text-amber-300 mt-1">
+                <div className="p-3.5 rounded-xl bg-warm-ivory border border-soft-pistachio">
+                  <div className="text-soft-pistachio text-[10px] uppercase font-bold">Titik Impas (BEP Bulanan)</div>
+                  <div className="text-2xl font-black text-soft-apricot mt-1">
                     {breakEvenUnits.toLocaleString('id-ID')} Unit
                   </div>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-soft-pistachio">
                     Target omzet BEP: Rp {(breakEvenUnits * sellingPrice).toLocaleString('id-ID')}
                   </span>
                 </div>
 
                 {/* Net monthly profit */}
-                <div className="p-3.5 rounded-xl bg-navy-950 border border-slate-800">
-                  <div className="text-slate-400 text-[10px] uppercase font-bold">Proyeksi Laba Bersih Operasional</div>
-                  <div className={`text-2xl font-black mt-1 ${netMonthlyProfit >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                <div className="p-3.5 rounded-xl bg-warm-ivory border border-soft-pistachio">
+                  <div className="text-soft-pistachio text-[10px] uppercase font-bold">Proyeksi Laba Bersih Operasional</div>
+                  <div className={`text-2xl font-black mt-1 ${netMonthlyProfit >= 0 ? 'text-soft-pistachio' : 'text-soft-apricot'}`}>
                     Rp {netMonthlyProfit.toLocaleString('id-ID')}
                   </div>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-soft-pistachio">
                     Dari proyeksi omzet Rp {monthlyRevenue.toLocaleString('id-ID')}
                   </span>
                 </div>
 
                 {/* Payback period */}
-                <div className="p-3.5 rounded-xl bg-navy-950 border border-slate-800">
-                  <div className="text-slate-400 text-[10px] uppercase font-bold">Estimasi Balik Modal (Payback)</div>
-                  <div className="text-2xl font-black text-indigo-300 mt-1">
+                <div className="p-3.5 rounded-xl bg-warm-ivory border border-soft-pistachio">
+                  <div className="text-soft-pistachio text-[10px] uppercase font-bold">Estimasi Balik Modal (Payback)</div>
+                  <div className="text-2xl font-black text-muted-pistachio mt-1">
                     {netMonthlyProfit > 0 ? `${breakEvenMonths} Bulan` : 'Tidak tercapai (Rugi)'}
                   </div>
                 </div>
               </div>
 
-              <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-800 text-[10px] text-slate-400 leading-snug">
+              <div className="p-3 rounded-lg bg-soft-pistachio/60 border border-soft-pistachio text-[10px] text-soft-pistachio leading-snug">
                 * Catatan: Proyeksi ini merupakan estimasi rasional dan belum memperhitungkan retur barang, diskon promosi marketplace, atau pajak PPh final UMKM 0,5%.
               </div>
             </div>
@@ -415,38 +415,38 @@ export default function BuilderPage() {
 
       {/* Tab 2: Concept & Persona */}
       {activeTab === 'concept' && (
-        <div className="p-6 rounded-2xl bg-navy-900 border border-slate-800 space-y-6">
+        <div className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio space-y-6">
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-white text-base">Konsep Produk & Persona Pelanggan Ideal</h3>
             <button
               onClick={handleGenerateAiModel}
               disabled={isGeneratingAi}
-              className="px-3.5 py-1.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold text-xs"
+              className="px-3.5 py-1.5 rounded-xl bg-soft-pistachio hover:bg-soft-pistachio text-deep-sage font-bold text-xs"
             >
               {isGeneratingAi ? 'Menganalisis...' : 'Sintesis Persona AI'}
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-            <div className="p-4 rounded-xl bg-navy-850 border border-slate-800 space-y-3">
-              <span className="font-bold text-teal-400 uppercase text-[11px]">Profil Persona Utama</span>
+            <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio space-y-3">
+              <span className="font-bold text-soft-pistachio uppercase text-[11px]">Profil Persona Utama</span>
               <div>
-                <span className="text-slate-400 block font-semibold">Nama Persona Archetype:</span>
+                <span className="text-soft-pistachio block font-semibold">Nama Persona Archetype:</span>
                 <span className="font-bold text-white">"Andi, The Health-Conscious Urban Tech Worker" (Usia 28)</span>
               </div>
               <div>
-                <span className="text-slate-400 block font-semibold">Karakter & Rutinitas:</span>
-                <p className="text-slate-300 mt-0.5">Bekerja hybrid di SCBD Jakarta, berolahraga padel/gym 3x seminggu, sering memesan minuman lewat delivery aplikasi saat jam 14:00.</p>
+                <span className="text-soft-pistachio block font-semibold">Karakter & Rutinitas:</span>
+                <p className="text-deep-sage mt-0.5">Bekerja hybrid di SCBD Jakarta, berolahraga padel/gym 3x seminggu, sering memesan minuman lewat delivery aplikasi saat jam 14:00.</p>
               </div>
               <div>
-                <span className="text-slate-400 block font-semibold">Pain Point Utama:</span>
-                <p className="text-slate-300 mt-0.5">Asam lambung sering kambuh jika minum es kopi susu gula aren setiap hari; ingin asupan antioksidan yang menyegarkan tanpa gula tambahan.</p>
+                <span className="text-soft-pistachio block font-semibold">Pain Point Utama:</span>
+                <p className="text-deep-sage mt-0.5">Asam lambung sering kambuh jika minum es kopi susu gula aren setiap hari; ingin asupan antioksidan yang menyegarkan tanpa gula tambahan.</p>
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-navy-850 border border-slate-800 space-y-3">
-              <span className="font-bold text-indigo-400 uppercase text-[11px]">Customer Journey (Alur Pembelian)</span>
-              <ul className="space-y-2 text-slate-300">
+            <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio space-y-3">
+              <span className="font-bold text-muted-pistachio uppercase text-[11px]">Customer Journey (Alur Pembelian)</span>
+              <ul className="space-y-2 text-deep-sage">
                 <li><strong>Awareness:</strong> Melihat review honest di TikTok dari kreator gaya hidup sehat.</li>
                 <li><strong>Consideration:</strong> Memeriksa label nutrisi, izin BPOM, dan sertifikasi Halal.</li>
                 <li><strong>Purchase:</strong> Membeli paket bundle starter kit (isi 6 kaleng) via e-commerce dengan gratis ongkir.</li>
@@ -459,36 +459,36 @@ export default function BuilderPage() {
 
       {/* Tab 3: Indonesian Regulatory Guidance */}
       {activeTab === 'regulatory' && (
-        <div className="p-6 rounded-2xl bg-navy-900 border border-slate-800 space-y-6">
+        <div className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio space-y-6">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-teal-400" />
+            <ShieldCheck className="w-5 h-5 text-soft-pistachio" />
             <h3 className="font-bold text-white text-base">
               Panduan Kepatuhan Regulasi Bisnis di Indonesia
             </h3>
           </div>
 
-          <p className="text-xs text-slate-300 leading-relaxed">
+          <p className="text-xs text-deep-sage leading-relaxed">
             Menjalankan usaha di Indonesia menuntut kepatuhan perizinan resmi agar produk aman dari penyitaan hukum dan membangun kepercayaan tinggi di mata konsumen.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-            <div className="p-4 rounded-xl bg-navy-850 border border-slate-800 space-y-2">
-              <span className="text-[11px] font-bold uppercase text-teal-400">1. Izin Edar Makanan & Minuman</span>
-              <p className="text-slate-300"><strong>PIRT vs BPOM MD:</strong> Produk rumahan berisiko rendah dapat menggunakan SPP-PIRT Dinas Kesehatan. Produk bertekanan, kaleng, susu, atau maklon wajib izin BPOM MD.</p>
+            <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio space-y-2">
+              <span className="text-[11px] font-bold uppercase text-soft-pistachio">1. Izin Edar Makanan & Minuman</span>
+              <p className="text-deep-sage"><strong>PIRT vs BPOM MD:</strong> Produk rumahan berisiko rendah dapat menggunakan SPP-PIRT Dinas Kesehatan. Produk bertekanan, kaleng, susu, atau maklon wajib izin BPOM MD.</p>
             </div>
 
-            <div className="p-4 rounded-xl bg-navy-850 border border-slate-800 space-y-2">
-              <span className="text-[11px] font-bold uppercase text-teal-400">2. Sertifikasi Halal (BPJPH)</span>
-              <p className="text-slate-300">Wajib bagi produk pangan dan kosmetik sesuai UU Jaminan Produk Halal. Pastikan bahan baku impor memiliki sertifikat halal yang diakui saling-terima (MRA).</p>
+            <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio space-y-2">
+              <span className="text-[11px] font-bold uppercase text-soft-pistachio">2. Sertifikasi Halal (BPJPH)</span>
+              <p className="text-deep-sage">Wajib bagi produk pangan dan kosmetik sesuai UU Jaminan Produk Halal. Pastikan bahan baku impor memiliki sertifikat halal yang diakui saling-terima (MRA).</p>
             </div>
 
-            <div className="p-4 rounded-xl bg-navy-850 border border-slate-800 space-y-2">
-              <span className="text-[11px] font-bold uppercase text-teal-400">3. Notifikasi Kosmetik (BPOM NA)</span>
-              <p className="text-slate-300">Untuk produk perawatan kulit/skincare, wajib diproduksi di pabrik bersertifikat CPKB A atau maklon berizin resmi dengan nomor notifikasi NA sebelum boleh dijual.</p>
+            <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio space-y-2">
+              <span className="text-[11px] font-bold uppercase text-soft-pistachio">3. Notifikasi Kosmetik (BPOM NA)</span>
+              <p className="text-deep-sage">Untuk produk perawatan kulit/skincare, wajib diproduksi di pabrik bersertifikat CPKB A atau maklon berizin resmi dengan nomor notifikasi NA sebelum boleh dijual.</p>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-500/30 text-xs text-amber-300/90 leading-relaxed">
+          <div className="p-4 rounded-xl bg-soft-apricot/20 border border-amber-500/30 text-xs text-soft-apricot/90 leading-relaxed">
             <strong>Pemberitahuan Resmi:</strong> WAVE adalah perangkat intelijen bisnis dan perencanaan strategis. Selalu konsultasikan spesifikasi teknis produk Anda dengan instansi resmi (BPOM RI, BPJPH, atau Dinas Perindustrian/Kesehatan daerah Anda) sebelum peluncuran komersial.
           </div>
         </div>

@@ -828,17 +828,17 @@ export const INITIAL_TRENDS: Trend[] = [
 ];
 
 export const LIFECYCLE_BADGES = {
-  emerging: { label: 'Emerging', color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' },
-  rising: { label: 'Rising Fast', color: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20' },
-  peak: { label: 'Approaching Peak', color: 'bg-amber-500/10 text-amber-400 border-amber-500/20' },
+  emerging: { label: 'Emerging', color: 'bg-soft-pistachio/10 text-soft-pistachio border-emerald-500/20' },
+  rising: { label: 'Rising Fast', color: 'bg-soft-apricot/10 text-soft-apricot border-cyan-500/20' },
+  peak: { label: 'Approaching Peak', color: 'bg-soft-apricot/10 text-soft-apricot border-amber-500/20' },
   saturated: { label: 'Saturated Market', color: 'bg-orange-500/10 text-orange-400 border-orange-500/20' },
-  declining: { label: 'Declining', color: 'bg-rose-500/10 text-rose-400 border-rose-500/20' },
-  evergreen: { label: 'Evergreen Stable', color: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20' },
+  declining: { label: 'Declining', color: 'bg-soft-apricot/10 text-soft-apricot border-rose-500/20' },
+  evergreen: { label: 'Evergreen Stable', color: 'bg-muted-pistachio/10 text-muted-pistachio border-indigo-500/20' },
 };
 
 export const DATA_LABEL_STYLES = {
-  'VERIFIED DATA': 'bg-emerald-950/60 text-emerald-300 border-emerald-700/50',
-  'ESTIMATED DATA': 'bg-cyan-950/60 text-cyan-300 border-cyan-700/50',
+  'VERIFIED DATA': 'bg-soft-pistachio/60 text-soft-pistachio border-emerald-700/50',
+  'ESTIMATED DATA': 'bg-soft-apricot/60 text-soft-apricot border-cyan-700/50',
   'AI-GENERATED INSIGHT': 'bg-purple-950/60 text-purple-300 border-purple-700/50',
-  'HYPOTHESIS': 'bg-amber-950/60 text-amber-300 border-amber-700/50',
+  'HYPOTHESIS': 'bg-soft-apricot/60 text-soft-apricot border-amber-700/50',
 };

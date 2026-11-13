@@ -138,19 +138,19 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
       {isOpen && (
         <div
           onClick={onClose}
-          className="fixed inset-0 z-40 bg-navy-950/80 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-warm-ivory/80 backdrop-blur-sm lg:hidden"
         />
       )}
 
       <aside
-        className={`fixed top-16 bottom-0 left-0 z-40 w-64 bg-navy-950 border-r border-slate-800/80 flex flex-col justify-between overflow-y-auto transition-transform duration-200 lg:translate-x-0 ${
+        className={`fixed top-16 bottom-0 left-0 z-40 w-64 bg-warm-ivory border-r border-soft-pistachio/80 flex flex-col justify-between overflow-y-auto transition-transform duration-200 lg:translate-x-0 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="py-4 px-3 space-y-6">
           {navGroups.map((group) => (
             <div key={group.title}>
-              <div className="px-3 mb-2 text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+              <div className="px-3 mb-2 text-[10px] font-bold tracking-widest text-soft-pistachio uppercase">
                 {group.title}
               </div>
               <ul className="space-y-1">
@@ -163,17 +163,17 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
                       <li key={item.href}>
                         <button
                           onClick={() => triggerUpgradePrompt(item.label)}
-                          className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-navy-900/60 transition-colors group text-left"
+                          className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium text-soft-pistachio hover:text-deep-sage hover:bg-soft-pistachio/60 transition-colors group text-left"
                         >
                           <div className="flex items-center gap-2.5">
-                            <Icon className="w-4 h-4 text-slate-500 group-hover:text-slate-300" />
+                            <Icon className="w-4 h-4 text-soft-pistachio group-hover:text-deep-sage" />
                             <span>{item.label}</span>
                           </div>
                           <div className="flex items-center gap-1.5">
-                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700/50">
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-soft-pistachio text-soft-pistachio border border-soft-pistachio/50">
                               {item.badge}
                             </span>
-                            <Lock className="w-3 h-3 text-slate-500" />
+                            <Lock className="w-3 h-3 text-soft-pistachio" />
                           </div>
                         </button>
                       </li>
@@ -187,14 +187,14 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
                         onClick={onClose}
                         className={`flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-all ${
                           isActive
-                            ? 'bg-teal-500/10 text-teal-300 font-semibold border border-teal-500/30 shadow-sm shadow-teal-500/10'
-                            : 'text-slate-300 hover:text-white hover:bg-navy-900'
+                            ? 'bg-soft-pistachio/10 text-soft-pistachio font-semibold border border-teal-500/30 shadow-sm shadow-teal-500/10'
+                            : 'text-deep-sage hover:text-white hover:bg-warm-ivory'
                         }`}
                       >
                         <div className="flex items-center gap-2.5">
                           <Icon
                             className={`w-4 h-4 ${
-                              isActive ? 'text-teal-400' : 'text-slate-400'
+                              isActive ? 'text-soft-pistachio' : 'text-soft-pistachio'
                             }`}
                           />
                           <span>{item.label}</span>
@@ -203,10 +203,10 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
                           <span
                             className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${
                               item.badge === 'CORE'
-                                ? 'bg-teal-500/20 text-teal-300 border-teal-500/30'
+                                ? 'bg-soft-pistachio/20 text-soft-pistachio border-teal-500/30'
                                 : item.badge === 'PRO'
-                                ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
-                                : 'bg-slate-800 text-slate-400 border-slate-700'
+                                ? 'bg-muted-pistachio/20 text-muted-pistachio border-indigo-500/40'
+                                : 'bg-soft-pistachio text-soft-pistachio border-soft-pistachio'
                             }`}
                           >
                             {item.badge}
@@ -222,12 +222,12 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
         </div>
 
         {/* Bottom Banner */}
-        <div className="p-3 m-3 rounded-xl bg-gradient-to-b from-navy-900 to-navy-850 border border-slate-800 text-xs">
+        <div className="p-3 m-3 rounded-xl bg-gradient-to-b from-navy-900 to-navy-850 border border-soft-pistachio text-xs">
           <div className="font-bold text-white mb-1 flex items-center justify-between">
             <span>Paket Anda: {subscription.plan.toUpperCase()}</span>
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-soft-pistachio animate-pulse" />
           </div>
-          <p className="text-[11px] text-slate-400 mb-3">
+          <p className="text-[11px] text-soft-pistachio mb-3">
             {subscription.plan === 'pro'
               ? 'Akses penuh seluruh modul WAVE Builder & Launch.'
               : subscription.plan === 'premium'
@@ -237,7 +237,7 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
           {subscription.plan !== 'pro' && (
             <button
               onClick={() => triggerUpgradePrompt('WAVE PRO')}
-              className="w-full py-1.5 rounded-lg bg-teal-500/15 hover:bg-teal-500/25 border border-teal-500/30 text-teal-300 text-[11px] font-bold transition-all text-center"
+              className="w-full py-1.5 rounded-lg bg-soft-pistachio/15 hover:bg-soft-pistachio/25 border border-teal-500/30 text-soft-pistachio text-[11px] font-bold transition-all text-center"
             >
               Tingkatkan ke PRO
             </button>

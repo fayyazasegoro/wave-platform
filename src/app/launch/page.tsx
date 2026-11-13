@@ -69,7 +69,7 @@ export default function LaunchPage() {
   return (
     <AppLayout>
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-teal-500 text-navy-950 font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
+        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-soft-pistachio text-deep-sage font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
           <span>✓ {toastMessage}</span>
         </div>
       )}
@@ -77,14 +77,14 @@ export default function LaunchPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-teal-500/10 to-indigo-500/10 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-teal-500/10 to-indigo-500/10 text-soft-pistachio text-xs font-semibold uppercase tracking-wider mb-2">
             <Rocket className="w-3.5 h-3.5" />
             MODULE 6B • BUSINESS LAUNCH ROADMAP
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             12-Stage Actionable Launch Roadmap
           </h1>
-          <p className="text-slate-400 text-xs sm:text-sm mt-1">
+          <p className="text-soft-pistachio text-xs sm:text-sm mt-1">
             Panduan eksekusi langkah demi langkah: dari validasi pasar, pengadaan pemasok, branding, kemasan, hingga peluncuran resmi.
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function LaunchPage() {
         <div className="flex items-center gap-2">
           <Link
             href="/canvas"
-            className="px-4 py-2 rounded-xl bg-navy-900 border border-slate-700 hover:border-slate-600 text-slate-200 text-xs font-semibold"
+            className="px-4 py-2 rounded-xl bg-warm-ivory border border-soft-pistachio hover:border-soft-pistachio text-deep-sage text-xs font-semibold"
           >
             Kembali ke Canvas
           </Link>
@@ -103,21 +103,21 @@ export default function LaunchPage() {
       {!isPro && (
         <div className="p-5 rounded-2xl bg-gradient-to-r from-teal-950/40 via-navy-900 to-indigo-950/40 border border-teal-500/30 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl">
           <div className="flex items-start gap-3">
-            <div className="p-2.5 rounded-xl bg-teal-500/20 text-teal-300 shrink-0">
+            <div className="p-2.5 rounded-xl bg-soft-pistachio/20 text-soft-pistachio shrink-0">
               <Lock className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-bold text-white text-sm mb-0.5">
                 Business Launch Roadmap Eksklusif untuk Paket PRO
               </h3>
-              <p className="text-xs text-slate-300 max-w-xl">
+              <p className="text-xs text-deep-sage max-w-xl">
                 Tingkatkan akun Anda ke Pro untuk mengubah dan menyimpan tugas peluncuran bisnis terarah, mengaitkan dependensi, dan memantau kemajuan milestone hingga hari peluncuran.
               </p>
             </div>
           </div>
           <button
             onClick={() => triggerUpgradePrompt('Business Launch (Paket Pro)')}
-            className="px-5 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold text-xs shrink-0 shadow-lg shadow-teal-500/20"
+            className="px-5 py-2.5 rounded-xl bg-soft-pistachio hover:bg-soft-pistachio text-deep-sage font-bold text-xs shrink-0 shadow-lg shadow-teal-500/20"
           >
             Buka Peluncuran Pro
           </button>
@@ -125,10 +125,10 @@ export default function LaunchPage() {
       )}
 
       {/* Progress & Milestone Summary */}
-      <div className="p-6 rounded-2xl bg-navy-900 border border-slate-800 mb-8 shadow-sm">
+      <div className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio mb-8 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
           <div>
-            <span className="text-[11px] font-bold uppercase text-teal-400 block mb-1">
+            <span className="text-[11px] font-bold uppercase text-soft-pistachio block mb-1">
               Progres Peluncuran: {activeProject?.name || 'Proyek Bisnis'}
             </span>
             <div className="text-xl font-bold text-white">
@@ -138,10 +138,10 @@ export default function LaunchPage() {
 
           <div className="flex items-center gap-4">
             <div className="text-right">
-              <span className="text-2xl font-black text-teal-300">{progressPercent}%</span>
-              <span className="text-[10px] text-slate-400 block">Kesiapan Rilis</span>
+              <span className="text-2xl font-black text-soft-pistachio">{progressPercent}%</span>
+              <span className="text-[10px] text-soft-pistachio block">Kesiapan Rilis</span>
             </div>
-            <div className="w-28 bg-slate-800 rounded-full h-3 overflow-hidden">
+            <div className="w-28 bg-soft-pistachio rounded-full h-3 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-teal-400 to-indigo-500 h-3 rounded-full transition-all duration-500"
                 style={{ width: `${progressPercent}%` }}
@@ -151,12 +151,12 @@ export default function LaunchPage() {
         </div>
 
         {/* View and Status Toggles */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-800 text-xs">
-          <div className="flex items-center gap-1 bg-navy-950 p-1 rounded-xl border border-slate-800">
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-soft-pistachio text-xs">
+          <div className="flex items-center gap-1 bg-warm-ivory p-1 rounded-xl border border-soft-pistachio">
             <button
               onClick={() => setFilterStatus('all')}
               className={`px-3 py-1 rounded-lg font-medium transition-colors ${
-                filterStatus === 'all' ? 'bg-teal-500 text-navy-950 font-bold' : 'text-slate-400'
+                filterStatus === 'all' ? 'bg-soft-pistachio text-deep-sage font-bold' : 'text-soft-pistachio'
               }`}
             >
               Semua ({tasks.length})
@@ -164,7 +164,7 @@ export default function LaunchPage() {
             <button
               onClick={() => setFilterStatus('todo')}
               className={`px-3 py-1 rounded-lg font-medium transition-colors ${
-                filterStatus === 'todo' ? 'bg-teal-500 text-navy-950 font-bold' : 'text-slate-400'
+                filterStatus === 'todo' ? 'bg-soft-pistachio text-deep-sage font-bold' : 'text-soft-pistachio'
               }`}
             >
               Belum ({tasks.filter((t) => t.status === 'todo').length})
@@ -172,7 +172,7 @@ export default function LaunchPage() {
             <button
               onClick={() => setFilterStatus('in_progress')}
               className={`px-3 py-1 rounded-lg font-medium transition-colors ${
-                filterStatus === 'in_progress' ? 'bg-teal-500 text-navy-950 font-bold' : 'text-slate-400'
+                filterStatus === 'in_progress' ? 'bg-soft-pistachio text-deep-sage font-bold' : 'text-soft-pistachio'
               }`}
             >
               Proses ({inProgressCount})
@@ -180,18 +180,18 @@ export default function LaunchPage() {
             <button
               onClick={() => setFilterStatus('done')}
               className={`px-3 py-1 rounded-lg font-medium transition-colors ${
-                filterStatus === 'done' ? 'bg-teal-500 text-navy-950 font-bold' : 'text-slate-400'
+                filterStatus === 'done' ? 'bg-soft-pistachio text-deep-sage font-bold' : 'text-soft-pistachio'
               }`}
             >
               Selesai ({completedCount})
             </button>
           </div>
 
-          <div className="flex items-center gap-1 bg-navy-950 p-1 rounded-xl border border-slate-800">
+          <div className="flex items-center gap-1 bg-warm-ivory p-1 rounded-xl border border-soft-pistachio">
             <button
               onClick={() => setViewMode('checklist')}
               className={`px-3 py-1 rounded-lg font-medium flex items-center gap-1.5 transition-colors ${
-                viewMode === 'checklist' ? 'bg-indigo-600 text-white font-bold' : 'text-slate-400'
+                viewMode === 'checklist' ? 'bg-muted-pistachio text-white font-bold' : 'text-soft-pistachio'
               }`}
             >
               <ListTodo className="w-3.5 h-3.5" /> Checklist
@@ -199,7 +199,7 @@ export default function LaunchPage() {
             <button
               onClick={() => setViewMode('timeline')}
               className={`px-3 py-1 rounded-lg font-medium flex items-center gap-1.5 transition-colors ${
-                viewMode === 'timeline' ? 'bg-indigo-600 text-white font-bold' : 'text-slate-400'
+                viewMode === 'timeline' ? 'bg-muted-pistachio text-white font-bold' : 'text-soft-pistachio'
               }`}
             >
               <Calendar className="w-3.5 h-3.5" /> Timeline
@@ -219,10 +219,10 @@ export default function LaunchPage() {
               key={task.id}
               className={`p-5 rounded-2xl border transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
                 isDone
-                  ? 'bg-navy-900/40 border-slate-800/60 opacity-80'
+                  ? 'bg-warm-ivory/40 border-soft-pistachio/60 opacity-80'
                   : isInProgress
-                  ? 'bg-navy-900 border-teal-500/50 ring-1 ring-teal-500/30'
-                  : 'bg-navy-900 border-slate-800'
+                  ? 'bg-warm-ivory border-teal-500/50 ring-1 ring-teal-500/30'
+                  : 'bg-warm-ivory border-soft-pistachio'
               }`}
             >
               <div className="flex items-start gap-3.5">
@@ -231,17 +231,17 @@ export default function LaunchPage() {
                   onClick={() => handleToggleTaskStatus(task.id)}
                   className={`mt-0.5 p-1 rounded-lg transition-colors ${
                     isDone
-                      ? 'text-emerald-400 hover:text-slate-400'
+                      ? 'text-soft-pistachio hover:text-soft-pistachio'
                       : isInProgress
-                      ? 'text-teal-400 hover:text-emerald-400'
-                      : 'text-slate-500 hover:text-teal-400'
+                      ? 'text-soft-pistachio hover:text-soft-pistachio'
+                      : 'text-soft-pistachio hover:text-soft-pistachio'
                   }`}
                   title="Klik untuk mengubah status (Todo -> In Progress -> Done)"
                 >
                   {isDone ? (
-                    <CheckCircle2 className="w-5 h-5 fill-emerald-500/20 text-emerald-400" />
+                    <CheckCircle2 className="w-5 h-5 fill-emerald-500/20 text-soft-pistachio" />
                   ) : isInProgress ? (
-                    <Clock className="w-5 h-5 text-teal-400 animate-spin" />
+                    <Clock className="w-5 h-5 text-soft-pistachio animate-spin" />
                   ) : (
                     <Circle className="w-5 h-5" />
                   )}
@@ -249,30 +249,30 @@ export default function LaunchPage() {
 
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-1">
-                    <span className="text-[10px] font-bold uppercase text-teal-400 px-2 py-0.5 rounded bg-teal-500/10">
+                    <span className="text-[10px] font-bold uppercase text-soft-pistachio px-2 py-0.5 rounded bg-soft-pistachio/10">
                       Tahap {task.stageIndex}: {task.stageName}
                     </span>
                     <span
                       className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${
                         task.priority === 'High'
-                          ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20'
-                          : 'bg-slate-800 text-slate-300'
+                          ? 'bg-soft-apricot/10 text-soft-apricot border border-rose-500/20'
+                          : 'bg-soft-pistachio text-deep-sage'
                       }`}
                     >
                       Prioritas {task.priority}
                     </span>
-                    <span className="text-[11px] text-slate-400 font-mono">
+                    <span className="text-[11px] text-soft-pistachio font-mono">
                       {task.estimatedTimeframe}
                     </span>
                   </div>
 
-                  <h4 className={`text-sm font-bold ${isDone ? 'line-through text-slate-400' : 'text-white'}`}>
+                  <h4 className={`text-sm font-bold ${isDone ? 'line-through text-soft-pistachio' : 'text-white'}`}>
                     {task.taskName}
                   </h4>
-                  <p className="text-xs text-slate-400 mt-0.5">{task.description}</p>
+                  <p className="text-xs text-soft-pistachio mt-0.5">{task.description}</p>
 
                   {task.notes && (
-                    <div className="mt-2 text-[11px] text-slate-300 bg-navy-850 p-2 rounded-lg border border-slate-800">
+                    <div className="mt-2 text-[11px] text-deep-sage bg-soft-pistachio p-2 rounded-lg border border-soft-pistachio">
                       Catatan: {task.notes}
                     </div>
                   )}
@@ -284,16 +284,16 @@ export default function LaunchPage() {
                 <span
                   className={`text-[10px] font-bold uppercase px-2.5 py-1 rounded-full border ${
                     isDone
-                      ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                      ? 'bg-soft-pistachio/10 text-soft-pistachio border-emerald-500/30'
                       : isInProgress
-                      ? 'bg-teal-500/10 text-teal-300 border-teal-500/30'
-                      : 'bg-slate-800 text-slate-400 border-slate-700'
+                      ? 'bg-soft-pistachio/10 text-soft-pistachio border-teal-500/30'
+                      : 'bg-soft-pistachio text-soft-pistachio border-soft-pistachio'
                   }`}
                 >
                   {isDone ? 'Selesai' : isInProgress ? 'Sedang Dikerjakan' : 'Belum Mulai'}
                 </span>
                 {task.completionDate && (
-                  <span className="text-[10px] text-slate-500">
+                  <span className="text-[10px] text-soft-pistachio">
                     Selesai: {task.completionDate}
                   </span>
                 )}

@@ -69,7 +69,7 @@ function InnovateContent() {
   return (
     <AppLayout>
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-teal-500 text-navy-950 font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
+        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-soft-pistachio text-deep-sage font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
           <span>✓ {toastMessage}</span>
         </div>
       )}
@@ -77,25 +77,25 @@ function InnovateContent() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-muted-pistachio/10 text-muted-pistachio text-xs font-semibold uppercase tracking-wider mb-2">
             <Lightbulb className="w-3.5 h-3.5" />
             MODULE 4 • WAVE INNOVATE
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Don't Just Follow. Reinvent.
           </h1>
-          <p className="text-slate-400 text-xs sm:text-sm mt-1">
+          <p className="text-soft-pistachio text-xs sm:text-sm mt-1">
             Temukan celah pasar (market gaps), bedah kelemahan kompetitor, dan rumuskan inovasi 7 dimensi dengan USP berdaya tahan tinggi.
           </p>
         </div>
 
         {/* Trend Switcher */}
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400 shrink-0">Konteks Tren:</span>
+          <span className="text-xs text-soft-pistachio shrink-0">Konteks Tren:</span>
           <select
             value={selectedTrendId}
             onChange={(e) => setSelectedTrendId(e.target.value)}
-            className="bg-navy-900 border border-slate-700 text-white text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-teal-400 max-w-[280px] truncate"
+            className="bg-warm-ivory border border-soft-pistachio text-white text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-teal-400 max-w-[280px] truncate"
           >
             {INITIAL_TRENDS.map((t) => (
               <option key={t.id} value={t.id}>
@@ -110,21 +110,21 @@ function InnovateContent() {
       {isFree && (
         <div className="p-5 rounded-2xl bg-gradient-to-r from-indigo-950/40 via-navy-900 to-teal-950/40 border border-indigo-500/30 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl">
           <div className="flex items-start gap-3">
-            <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400 shrink-0">
+            <div className="p-2.5 rounded-xl bg-muted-pistachio/10 text-muted-pistachio shrink-0">
               <Lock className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-bold text-white text-sm mb-0.5">
                 WAVE Innovate & USP Generator Eksklusif untuk Premium & Pro
               </h3>
-              <p className="text-xs text-slate-300 max-w-xl">
+              <p className="text-xs text-deep-sage max-w-xl">
                 Nikmati fitur Market Gap Finder, Intelijen Kompetitor, dan Generator Inovasi 7 Dimensi untuk menciptakan pembeda yang tidak mudah ditiru.
               </p>
             </div>
           </div>
           <button
             onClick={() => triggerUpgradePrompt('WAVE Innovate')}
-            className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shrink-0 shadow-lg shadow-indigo-500/20"
+            className="px-5 py-2.5 rounded-xl bg-muted-pistachio hover:bg-muted-pistachio text-white font-bold text-xs shrink-0 shadow-lg shadow-indigo-500/20"
           >
             Buka WAVE Innovate
           </button>
@@ -132,13 +132,13 @@ function InnovateContent() {
       )}
 
       {/* Module Navigation Tabs */}
-      <div className="flex items-center gap-2 border-b border-slate-800 pb-3 mb-6 overflow-x-auto text-xs">
+      <div className="flex items-center gap-2 border-b border-soft-pistachio pb-3 mb-6 overflow-x-auto text-xs">
         <button
           onClick={() => setActiveTab('innovations')}
           className={`px-4 py-2 rounded-xl font-bold flex items-center gap-2 transition-all ${
             activeTab === 'innovations'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-              : 'bg-navy-900 text-slate-400 hover:text-white border border-slate-800'
+              ? 'bg-muted-pistachio text-white shadow-md shadow-indigo-600/20'
+              : 'bg-warm-ivory text-soft-pistachio hover:text-white border border-soft-pistachio'
           }`}
         >
           <Sparkles className="w-4 h-4" />
@@ -149,8 +149,8 @@ function InnovateContent() {
           onClick={() => setActiveTab('gaps')}
           className={`px-4 py-2 rounded-xl font-bold flex items-center gap-2 transition-all ${
             activeTab === 'gaps'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-              : 'bg-navy-900 text-slate-400 hover:text-white border border-slate-800'
+              ? 'bg-muted-pistachio text-white shadow-md shadow-indigo-600/20'
+              : 'bg-warm-ivory text-soft-pistachio hover:text-white border border-soft-pistachio'
           }`}
         >
           <Target className="w-4 h-4" />
@@ -161,8 +161,8 @@ function InnovateContent() {
           onClick={() => setActiveTab('competitors')}
           className={`px-4 py-2 rounded-xl font-bold flex items-center gap-2 transition-all ${
             activeTab === 'competitors'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-              : 'bg-navy-900 text-slate-400 hover:text-white border border-slate-800'
+              ? 'bg-muted-pistachio text-white shadow-md shadow-indigo-600/20'
+              : 'bg-warm-ivory text-soft-pistachio hover:text-white border border-soft-pistachio'
           }`}
         >
           <Layers className="w-4 h-4" />
@@ -173,7 +173,7 @@ function InnovateContent() {
           <button
             onClick={handleRunAiInnovation}
             disabled={isGeneratingAi}
-            className="px-3.5 py-1.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-navy-950 font-extrabold text-xs flex items-center gap-1.5 shadow-md shadow-teal-500/15"
+            className="px-3.5 py-1.5 rounded-xl bg-soft-pistachio hover:bg-soft-pistachio text-deep-sage font-extrabold text-xs flex items-center gap-1.5 shadow-md shadow-teal-500/15"
           >
             <Zap className="w-3.5 h-3.5 fill-current" />
             {isGeneratingAi ? 'Menganalisis...' : 'Generate Inovasi Baru'}
@@ -187,16 +187,16 @@ function InnovateContent() {
           {trend.innovations.map((inno) => (
             <div
               key={inno.id}
-              className="p-6 rounded-2xl bg-navy-900 border border-slate-800 shadow-md space-y-6"
+              className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio shadow-md space-y-6"
             >
               {/* Innovation Header */}
-              <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-800">
+              <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-soft-pistachio">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[11px] font-bold text-indigo-400 uppercase tracking-wider">
+                    <span className="text-[11px] font-bold text-muted-pistachio uppercase tracking-wider">
                       {inno.dimension}
                     </span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-soft-pistachio/10 text-soft-pistachio border border-teal-500/20">
                       {inno.classification}
                     </span>
                   </div>
@@ -205,12 +205,12 @@ function InnovateContent() {
 
                 <div className="flex items-center gap-3">
                   <div className="text-right">
-                    <div className="text-[10px] uppercase text-slate-400 font-bold">Skor Kelayakan</div>
-                    <div className="text-base font-extrabold text-teal-300">{inno.feasibilityScore}/100</div>
+                    <div className="text-[10px] uppercase text-soft-pistachio font-bold">Skor Kelayakan</div>
+                    <div className="text-base font-extrabold text-soft-pistachio">{inno.feasibilityScore}/100</div>
                   </div>
                   <button
                     onClick={() => handleSaveInnovation(inno)}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold text-xs shadow-md shadow-teal-500/15 transition-all"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-soft-pistachio hover:bg-soft-pistachio text-deep-sage font-bold text-xs shadow-md shadow-teal-500/15 transition-all"
                   >
                     <FolderPlus className="w-4 h-4" />
                     Simpan Inovasi ke Canvas
@@ -220,15 +220,15 @@ function InnovateContent() {
 
               {/* Description & How It Works */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <div className="p-4 rounded-xl bg-navy-850 border border-slate-800">
-                  <div className="font-bold text-slate-300 uppercase text-[10px] mb-1">Deskripsi & Urgensi</div>
-                  <p className="text-slate-300 mb-2 leading-relaxed">{inno.description}</p>
-                  <p className="text-teal-400 font-medium">Mengapa penting: {inno.whyItMatters}</p>
+                <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio">
+                  <div className="font-bold text-deep-sage uppercase text-[10px] mb-1">Deskripsi & Urgensi</div>
+                  <p className="text-deep-sage mb-2 leading-relaxed">{inno.description}</p>
+                  <p className="text-soft-pistachio font-medium">Mengapa penting: {inno.whyItMatters}</p>
                 </div>
-                <div className="p-4 rounded-xl bg-navy-850 border border-slate-800">
-                  <div className="font-bold text-slate-300 uppercase text-[10px] mb-1">Cara Kerja Teknis</div>
-                  <p className="text-slate-300 leading-relaxed mb-2">{inno.howItWorks}</p>
-                  <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio">
+                  <div className="font-bold text-deep-sage uppercase text-[10px] mb-1">Cara Kerja Teknis</div>
+                  <p className="text-deep-sage leading-relaxed mb-2">{inno.howItWorks}</p>
+                  <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded bg-soft-pistachio text-deep-sage border border-soft-pistachio">
                     Estimasi Modal: {inno.costCategory}
                   </span>
                 </div>
@@ -237,7 +237,7 @@ function InnovateContent() {
               {/* USP Generator Breakdown Box */}
               <div className="p-5 rounded-2xl bg-gradient-to-br from-navy-950 to-navy-900 border border-indigo-500/30">
                 <div className="flex items-center gap-2 mb-4">
-                  <Sparkles className="w-4 h-4 text-indigo-400" />
+                  <Sparkles className="w-4 h-4 text-muted-pistachio" />
                   <h4 className="text-sm font-bold text-white uppercase tracking-wider">
                     Struktur Unique Selling Proposition (USP)
                   </h4>
@@ -245,38 +245,38 @@ function InnovateContent() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase font-bold">Value Proposition</span>
+                    <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Value Proposition</span>
                     <p className="font-semibold text-white mt-0.5">{inno.usp.valueProposition}</p>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase font-bold">Unique Selling Point (USP)</span>
-                    <p className="font-semibold text-teal-300 mt-0.5">{inno.usp.uniqueSellingPoint}</p>
+                    <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Unique Selling Point (USP)</span>
+                    <p className="font-semibold text-soft-pistachio mt-0.5">{inno.usp.uniqueSellingPoint}</p>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase font-bold">Diferensiasi Utama</span>
-                    <p className="text-slate-300 mt-0.5">{inno.usp.mainDifferentiator}</p>
+                    <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Diferensiasi Utama</span>
+                    <p className="text-deep-sage mt-0.5">{inno.usp.mainDifferentiator}</p>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase font-bold">Masalah yang Diselesaikan</span>
-                    <p className="text-slate-300 mt-0.5">{inno.usp.problemSolved}</p>
+                    <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Masalah yang Diselesaikan</span>
+                    <p className="text-deep-sage mt-0.5">{inno.usp.problemSolved}</p>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase font-bold">Keunggulan Bersaing</span>
-                    <p className="text-slate-300 mt-0.5">{inno.usp.competitiveAdvantage}</p>
+                    <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Keunggulan Bersaing</span>
+                    <p className="text-deep-sage mt-0.5">{inno.usp.competitiveAdvantage}</p>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase font-bold">Defensibility (Daya Tahan Pembeda)</span>
-                    <p className="text-slate-300 mt-0.5">{inno.usp.defensibility}</p>
+                    <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Defensibility (Daya Tahan Pembeda)</span>
+                    <p className="text-deep-sage mt-0.5">{inno.usp.defensibility}</p>
                   </div>
                 </div>
               </div>
 
               {/* Validation Steps */}
-              <div className="p-4 rounded-xl bg-navy-850/70 border border-slate-800 text-xs">
-                <span className="font-bold text-slate-300 uppercase text-[10px] block mb-2">
+              <div className="p-4 rounded-xl bg-soft-pistachio/70 border border-soft-pistachio text-xs">
+                <span className="font-bold text-deep-sage uppercase text-[10px] block mb-2">
                   Langkah Validasi Riil Sebelum Produksi Massal:
                 </span>
-                <ul className="list-disc list-inside space-y-1 text-slate-300">
+                <ul className="list-disc list-inside space-y-1 text-deep-sage">
                   {inno.validationSteps.map((step, idx) => (
                     <li key={idx}>{step}</li>
                   ))}
@@ -290,24 +290,24 @@ function InnovateContent() {
       {/* Tab 2: Market Gap Finder */}
       {activeTab === 'gaps' && (
         <div className="space-y-4">
-          <div className="p-4 rounded-xl bg-navy-900 border border-slate-800 text-xs text-slate-300">
+          <div className="p-4 rounded-xl bg-warm-ivory border border-soft-pistachio text-xs text-deep-sage">
             Celah pasar (market gaps) membedakan kebutuhan riil yang belum terlayani dari sekadar asumsi umum. Setiap celah di bawah telah diverifikasi dengan sinyal ulasan pembeli dan transaksi.
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {trend.marketGaps.map((gap) => (
-              <div key={gap.id} className="p-5 rounded-2xl bg-navy-900 border border-slate-800 shadow-sm">
+              <div key={gap.id} className="p-5 rounded-2xl bg-warm-ivory border border-soft-pistachio shadow-sm">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-bold uppercase text-amber-400 px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">
+                  <span className="text-[10px] font-bold uppercase text-soft-apricot px-2 py-0.5 rounded bg-soft-apricot/10 border border-amber-500/20">
                     Tipe: {gap.type.replace('_', ' ')}
                   </span>
                   <DataLabelBadge label={gap.evidenceLabel} />
                 </div>
                 <h4 className="text-base font-bold text-white mb-2">{gap.title}</h4>
-                <p className="text-xs text-slate-300 leading-relaxed mb-4">{gap.description}</p>
-                <div className="flex items-center justify-between pt-3 border-t border-slate-800 text-xs">
-                  <span className="text-slate-400">Dampak Potensi Pasar:</span>
-                  <span className="font-bold text-teal-300">{gap.impactScore}/100</span>
+                <p className="text-xs text-deep-sage leading-relaxed mb-4">{gap.description}</p>
+                <div className="flex items-center justify-between pt-3 border-t border-soft-pistachio text-xs">
+                  <span className="text-soft-pistachio">Dampak Potensi Pasar:</span>
+                  <span className="font-bold text-soft-pistachio">{gap.impactScore}/100</span>
                 </div>
               </div>
             ))}
@@ -318,40 +318,40 @@ function InnovateContent() {
       {/* Tab 3: Competitor Intelligence */}
       {activeTab === 'competitors' && (
         <div className="space-y-6">
-          <div className="p-4 rounded-xl bg-navy-900 border border-slate-800 text-xs text-slate-300">
+          <div className="p-4 rounded-xl bg-warm-ivory border border-soft-pistachio text-xs text-deep-sage">
             Intelijen kompetitor menyajikan data riil tanpa fabrikasi statistik penjualan atau ulasan palsu.
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {trend.competitors.map((comp, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-navy-900 border border-slate-800 shadow-sm space-y-4 text-xs">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div key={idx} className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio shadow-sm space-y-4 text-xs">
+                <div className="flex items-center justify-between pb-3 border-b border-soft-pistachio">
                   <div>
                     <h4 className="font-bold text-white text-base">{comp.brandName}</h4>
-                    <span className="text-[11px] text-slate-400">{comp.category}</span>
+                    <span className="text-[11px] text-soft-pistachio">{comp.category}</span>
                   </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-soft-pistachio text-deep-sage border border-soft-pistachio">
                     {comp.priceRange}
                   </span>
                 </div>
 
                 <div>
-                  <span className="text-slate-400 block text-[10px] uppercase font-bold">Positioning Pasar</span>
-                  <p className="text-slate-200 mt-0.5">{comp.positioning}</p>
+                  <span className="text-soft-pistachio block text-[10px] uppercase font-bold">Positioning Pasar</span>
+                  <p className="text-deep-sage mt-0.5">{comp.positioning}</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3 rounded-xl bg-navy-850 border border-slate-800">
-                    <span className="text-emerald-400 font-bold block mb-1">Kekuatan:</span>
-                    <ul className="list-disc list-inside space-y-1 text-slate-300 text-[11px]">
+                  <div className="p-3 rounded-xl bg-soft-pistachio border border-soft-pistachio">
+                    <span className="text-soft-pistachio font-bold block mb-1">Kekuatan:</span>
+                    <ul className="list-disc list-inside space-y-1 text-deep-sage text-[11px]">
                       {comp.strengths.map((s, i) => (
                         <li key={i}>{s}</li>
                       ))}
                     </ul>
                   </div>
-                  <div className="p-3 rounded-xl bg-navy-850 border border-slate-800">
-                    <span className="text-rose-400 font-bold block mb-1">Kelemahan:</span>
-                    <ul className="list-disc list-inside space-y-1 text-slate-300 text-[11px]">
+                  <div className="p-3 rounded-xl bg-soft-pistachio border border-soft-pistachio">
+                    <span className="text-soft-apricot font-bold block mb-1">Kelemahan:</span>
+                    <ul className="list-disc list-inside space-y-1 text-deep-sage text-[11px]">
                       {comp.weaknesses.map((w, i) => (
                         <li key={i}>{w}</li>
                       ))}
@@ -359,9 +359,9 @@ function InnovateContent() {
                   </div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-indigo-950/20 border border-indigo-500/30">
-                  <span className="text-indigo-300 font-bold block mb-1">Peluang Diferensiasi Terbuka:</span>
-                  <ul className="list-disc list-inside space-y-1 text-slate-300 text-[11px]">
+                <div className="p-3 rounded-xl bg-muted-pistachio/20 border border-indigo-500/30">
+                  <span className="text-muted-pistachio font-bold block mb-1">Peluang Diferensiasi Terbuka:</span>
+                  <ul className="list-disc list-inside space-y-1 text-deep-sage text-[11px]">
                     {comp.differentiationOpportunities.map((opp, i) => (
                       <li key={i}>{opp}</li>
                     ))}
@@ -378,7 +378,7 @@ function InnovateContent() {
 
 export default function InnovatePage() {
   return (
-    <Suspense fallback={<div className="p-8 text-center text-xs text-slate-400">Memuat WAVE Innovate...</div>}>
+    <Suspense fallback={<div className="p-8 text-center text-xs text-soft-pistachio">Memuat WAVE Innovate...</div>}>
       <InnovateContent />
     </Suspense>
   );

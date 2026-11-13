@@ -10,7 +10,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-navy-950 text-slate-100 flex flex-col font-sans selection:bg-teal-500 selection:text-navy-950">
+    <div className="min-h-screen bg-warm-ivory text-deep-sage flex flex-col font-sans selection:bg-soft-pistachio selection:text-deep-sage">
       <Navbar onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
       
       <div className="flex flex-1 pt-0">

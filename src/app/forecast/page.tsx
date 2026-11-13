@@ -87,7 +87,7 @@ function ForecastContent() {
   return (
     <AppLayout>
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-teal-500 text-navy-950 font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
+        <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-soft-pistachio text-deep-sage font-bold text-xs shadow-2xl flex items-center gap-2 animate-bounce">
           <span>✓ {toastMessage}</span>
         </div>
       )}
@@ -95,25 +95,25 @@ function ForecastContent() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-soft-pistachio/10 text-soft-pistachio text-xs font-semibold uppercase tracking-wider mb-2">
             <LineChartIcon className="w-3.5 h-3.5" />
             MODULE 2 • WAVE FORECAST
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Predict What's Next
           </h1>
-          <p className="text-slate-400 text-xs sm:text-sm mt-1">
+          <p className="text-soft-pistachio text-xs sm:text-sm mt-1">
             Proyeksi momentum permintaan vs. kepadatan kompetisi berbasis model statistik dan skenario masa depan.
           </p>
         </div>
 
         {/* Trend Switcher */}
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400 shrink-0">Pilih Tren:</span>
+          <span className="text-xs text-soft-pistachio shrink-0">Pilih Tren:</span>
           <select
             value={selectedTrendId}
             onChange={(e) => setSelectedTrendId(e.target.value)}
-            className="bg-navy-900 border border-slate-700 text-white text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-teal-400 max-w-[280px] truncate"
+            className="bg-warm-ivory border border-soft-pistachio text-white text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-teal-400 max-w-[280px] truncate"
           >
             {INITIAL_TRENDS.map((t) => (
               <option key={t.id} value={t.id}>
@@ -125,10 +125,10 @@ function ForecastContent() {
       </div>
 
       {/* Overview Card */}
-      <div className="p-6 rounded-2xl bg-navy-900 border border-slate-800 mb-8">
+      <div className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio mb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-teal-400 uppercase tracking-wider">
+            <span className="text-xs font-bold text-soft-pistachio uppercase tracking-wider">
               {trend.category}
             </span>
             <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${badge.color}`}>
@@ -139,9 +139,9 @@ function ForecastContent() {
 
           <button
             onClick={handleSaveForecast}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-soft-pistachio hover:bg-soft-pistachio text-deep-sage text-xs font-semibold transition-colors"
           >
-            <FolderPlus className="w-4 h-4 text-teal-400" />
+            <FolderPlus className="w-4 h-4 text-soft-pistachio" />
             Lampirkan ke Canvas
           </button>
         </div>
@@ -149,23 +149,23 @@ function ForecastContent() {
         <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
           {trend.name}
         </h2>
-        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+        <p className="text-xs sm:text-sm text-deep-sage leading-relaxed mb-6">
           {trend.shortDescription}
         </p>
 
         {/* Entry Recommendation Banner */}
-        <div className="p-4 rounded-xl bg-navy-850 border border-slate-700/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-4 rounded-xl bg-soft-pistachio border border-soft-pistachio/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="text-[11px] font-bold text-slate-400 uppercase mb-1">
+            <div className="text-[11px] font-bold text-soft-pistachio uppercase mb-1">
               Rekomendasi Waktu Masuk Pasar
             </div>
-            <p className="text-xs text-slate-300 max-w-2xl">
+            <p className="text-xs text-deep-sage max-w-2xl">
               {trend.recommendationRationale}
             </p>
           </div>
 
           <div className="shrink-0">
-            <span className="inline-block px-4 py-2 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-500/40 text-xs sm:text-sm font-extrabold tracking-wide">
+            <span className="inline-block px-4 py-2 rounded-xl bg-soft-pistachio/20 text-soft-pistachio border border-teal-500/40 text-xs sm:text-sm font-extrabold tracking-wide">
               {trend.entryRecommendation}
             </span>
           </div>
@@ -173,26 +173,26 @@ function ForecastContent() {
       </div>
 
       {/* Forecast Chart Card */}
-      <div className="p-6 rounded-2xl bg-navy-900 border border-slate-800 mb-8">
+      <div className="p-6 rounded-2xl bg-warm-ivory border border-soft-pistachio mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-teal-400" />
+              <Calendar className="w-4 h-4 text-soft-pistachio" />
               Simulasi Proyeksi Permintaan & Kepadatan Kompetisi
             </h3>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-soft-pistachio mt-0.5">
               Data historis 7 bulan terakhir dilanjutkan simulasi skenario (Dasar, Optimis, Pesimis).
             </p>
           </div>
 
           {/* Horizon Controls */}
-          <div className="flex items-center gap-1 bg-navy-950 p-1 rounded-xl border border-slate-800 text-xs">
+          <div className="flex items-center gap-1 bg-warm-ivory p-1 rounded-xl border border-soft-pistachio text-xs">
             <button
               onClick={() => setHorizon('1_3_months')}
               className={`px-3 py-1.5 rounded-lg font-medium transition-colors ${
                 horizon === '1_3_months'
-                  ? 'bg-teal-500 text-navy-950 font-bold'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-soft-pistachio text-deep-sage font-bold'
+                  : 'text-soft-pistachio hover:text-white'
               }`}
             >
               1–3 Bulan
@@ -201,8 +201,8 @@ function ForecastContent() {
               onClick={() => setHorizon('3_6_months')}
               className={`px-3 py-1.5 rounded-lg font-medium transition-colors ${
                 horizon === '3_6_months'
-                  ? 'bg-teal-500 text-navy-950 font-bold'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-soft-pistachio text-deep-sage font-bold'
+                  : 'text-soft-pistachio hover:text-white'
               }`}
             >
               3–6 Bulan
@@ -217,12 +217,12 @@ function ForecastContent() {
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1 ${
                 horizon === '6_12_months'
-                  ? 'bg-teal-500 text-navy-950 font-bold'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-soft-pistachio text-deep-sage font-bold'
+                  : 'text-soft-pistachio hover:text-white'
               }`}
             >
               <span>6–12 Bulan</span>
-              {!isPremium && <Lock className="w-3 h-3 text-slate-500" />}
+              {!isPremium && <Lock className="w-3 h-3 text-soft-pistachio" />}
             </button>
           </div>
         </div>
@@ -300,14 +300,14 @@ function ForecastContent() {
         </div>
 
         {/* Explanatory notes */}
-        <div className="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="mt-6 pt-4 border-t border-soft-pistachio flex flex-wrap items-center justify-between gap-4 text-xs text-soft-pistachio">
           <div className="flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 text-slate-500" />
+            <AlertCircle className="w-4 h-4 text-soft-pistachio" />
             <span>
               Penting: Pasar <strong>Jenuh (Saturated)</strong> berbeda dengan <strong>Menurun (Declining)</strong>. Pasar jenuh tetap memiliki volume permintaan tinggi namun menuntut diferensiasi tajam.
             </span>
           </div>
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[11px] text-soft-pistachio">
             Data Sumber: {trend.dataSources.join(', ')}
           </span>
         </div>
@@ -318,7 +318,7 @@ function ForecastContent() {
 
 export default function ForecastPage() {
   return (
-    <Suspense fallback={<div className="p-8 text-center text-xs text-slate-400">Memuat WAVE Forecast...</div>}>
+    <Suspense fallback={<div className="p-8 text-center text-xs text-soft-pistachio">Memuat WAVE Forecast...</div>}>
       <ForecastContent />
     </Suspense>
   );

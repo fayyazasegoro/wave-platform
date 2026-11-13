@@ -8,7 +8,7 @@ interface Props {
 }
 
 export function DataLabelBadge({ label, className = '' }: Props) {
-  const style = DATA_LABEL_STYLES[label] || 'bg-slate-800 text-slate-300 border-slate-700';
+  const style = DATA_LABEL_STYLES[label] || 'bg-soft-pistachio text-deep-sage border-soft-pistachio';
 
   return (
     <span

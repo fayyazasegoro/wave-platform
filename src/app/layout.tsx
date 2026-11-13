@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="dark">
-      <body className="bg-navy-950 text-slate-100 antialiased min-h-screen">
+      <body className="bg-warm-ivory text-deep-sage antialiased min-h-screen">
         <SubscriptionProvider>
           <ProjectProvider>
             {children}
